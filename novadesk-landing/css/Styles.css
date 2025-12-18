@@ -1,0 +1,107 @@
+
+a{
+    text-decoration-line: none;
+    color: aliceblue;
+
+}
+ul{
+    display: flex;
+    gap: 100px;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+header{
+    background-color: rgb(7, 134, 225);
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    
+}
+
+
+.primera_S{
+    background-image: url(../images/primera_S.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;    
+    margin-top: -1.4%;
+}
+
+button{
+    background-color: rgb(0, 170, 255);
+    
+}
+
+.Features {
+  display: grid;
+  grid-template-columns: (3, 2fr);
+  gap: 3rem;
+  padding-top: 2rem;
+}
+article{
+    box-shadow: 0 0 20px #73cfff;
+}
+
+.articulo_1{
+    grid-column: 1;
+    
+}
+.articulo_2{
+    grid-column: 2;
+}
+
+.articulo_3{
+    grid-column: 3;
+}
+
+.como_funciona_S {
+  display: grid;
+  grid-template-columns: (3, 2fr);
+  gap: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.articulo_6{
+    grid-column: 1;
+    border: 50%;
+}
+
+.articulo_7{
+    grid-column: 2;
+    border: 50%;
+}
+.articulo_8{
+    grid-column: 3;
+    border: 50%;
+}
+.articulo_9{
+    grid-column: 2;
+    border: 50%;
+}
+
+.precios_S{
+  display: grid;
+  grid-template-columns: (3, 3fr);
+  gap: 3rem;
+}
+
+.articulo_10{
+    grid-column: 1;
+}
+
+.articulo_11{
+    grid-column: 2;
+}
+
+.articulo_12{
+    grid-column: 3;
+}
+
