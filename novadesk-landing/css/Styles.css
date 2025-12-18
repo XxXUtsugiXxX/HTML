@@ -1,107 +1,189 @@
-
-a{
-    text-decoration-line: none;
-    color: aliceblue;
-
-}
-ul{
-    display: flex;
-    gap: 100px;
+/* =====================
+   RESET BÁSICO
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h2{
-    text-align: center;
+/* =====================
+   ESTILOS GENERALES
+===================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #1f2933;
 }
 
-p{
-    text-align: center;
+a {
+  text-decoration: none;
+  color: aliceblue;
 }
 
-header{
-    background-color: rgb(7, 134, 225);
-    display: flex;
-    align-items: center;
-    gap: 10%;
-    
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
-
-.primera_S{
-    background-image: url(../images/primera_S.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;    
-    margin-top: -1.4%;
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-button{
-    background-color: rgb(0, 170, 255);
-    
+p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
+/* =====================
+   HEADER
+===================== */
+header {
+  background: linear-gradient(135deg, #4f86b6,#042444);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+header img{
+    width: 10rem;
+    height: 5rem;
+}
+
+/* =====================
+   HERO / PRIMERA SECCIÓN
+===================== */
+.primera_S {
+  background-image: url(../images/primera_S.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+
+  padding: 4rem 2rem;
+  color: white;
+}
+
+/* =====================
+   BOTONES
+===================== */
+button {
+  background-color: rgb(0, 170, 255);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: center;
+}
+
+button:hover {
+  background-color: rgb(0, 145, 220);
+}
+
+/* =====================
+   FEATURES
+===================== */
 .Features {
   display: grid;
-  grid-template-columns: (3, 2fr);
-  gap: 3rem;
-  padding-top: 2rem;
-}
-article{
-    box-shadow: 0 0 20px #73cfff;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
 }
 
-.articulo_1{
-    grid-column: 1;
-    
-}
-.articulo_2{
-    grid-column: 2;
+article {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(115, 207, 255, 0.4);
+  text-align: center;
+  border: 1px solid rgb(0, 170, 255);
+  transform: scale(1.05);
+
 }
 
-.articulo_3{
-    grid-column: 3;
-}
-
+/* =====================
+   CÓMO FUNCIONA
+===================== */
 .como_funciona_S {
   display: grid;
-  grid-template-columns: (3, 2fr);
-  gap: 3rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #f5f9ff;
 }
 
-.articulo_6{
-    grid-column: 1;
-    border: 50%;
-}
-
-.articulo_7{
-    grid-column: 2;
-    border: 50%;
-}
-.articulo_8{
-    grid-column: 3;
-    border: 50%;
-}
-.articulo_9{
-    grid-column: 2;
-    border: 50%;
-}
-
-.precios_S{
+/* =====================
+   PRECIOS
+===================== */
+.precios_S {
   display: grid;
-  grid-template-columns: (3, 3fr);
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
 }
 
-.articulo_10{
-    grid-column: 1;
+
+
+/* =====================
+   testimoneos_S
+===================== */
+.testimoneos_S {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2rem;
 }
 
-.articulo_11{
-    grid-column: 2;
+.testimoneos_S h2 {
+  grid-column: 1 / -1;
 }
 
-.articulo_12{
-    grid-column: 3;
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  ul {
+    gap: 1rem;
+  }
+
+  .Features,
+  .como_funciona_S,
+  .precios_S {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimoneos_S,
+  .Features,
+  .como_funciona_S,
+  .precios_S {
+    grid-template-columns: 1fr;
+  }
+
+  .primera_S {
+    min-height: 70vh;
+    text-align: center;
+  }
+}
